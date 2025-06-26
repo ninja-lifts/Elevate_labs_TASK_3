@@ -1,0 +1,84 @@
+✅ Step 1 : Start Greenbone Services
+
+sudo gvm-start
+This starts:
+
+gvmd: manages the scans
+
+gsad: gives web access
+
+ospd-openvas: the actual scanner engine
+
+To stop it anytime:
+
+sudo gvm-stop
+🧩 PART 2: ACCESS THE WEB INTERFACE
+✅ Step 2: Log in to the GSA Web Interface
+Open your browser and go to:
+
+https://127.0.0.1:9392
+You’ll see a security warning (due to self-signed SSL certificate) — just proceed.
+
+Login with:
+
+Username: admin
+
+Password: (your password)
+
+You’re now in the Greenbone Security Assistant Dashboard 🎉
+
+🧩 PART 3: RUNNING A FULL SCAN ON LOCALHOST
+✅ Step 3: Add a Scan Target (localhost)
+Go to Configuration > Targets
+
+Click "Create Target"
+
+Fill in:
+
+Name: Localhost
+
+Hosts: IPv4 
+
+Leave rest as default
+
+Click Create
+
+This tells GVM what system you want to scan.
+
+✅ Step 4: Create a New Task
+Go to Scans > Tasks
+
+Click "Create Task"
+
+Fill in:
+
+Name: Full Scan on Localhost
+
+Target: select the Localhost you created
+
+Scan Config: choose Full and fast or Full and very deep
+
+Click Create
+
+✅ Step 5: Start the Scan
+Find your task in the task list
+
+Click the Play (▶️) icon to start the scan
+
+Wait for the scan to complete (may take 5–15 minutes depending on scan config)
+
+✅ Step 6 : View the Results
+Once the scan finishes:
+
+Go to Scans > Reports
+
+Click the report corresponding to your scan
+
+View:
+
+Vulnerabilities (sorted by severity)
+
+Hosts affected
+
+Suggestions for fixes
+

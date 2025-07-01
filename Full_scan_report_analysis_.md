@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 Summary of Findings
+## Summary of Findings
 
 | Severity | Count | Affected Port | Description                             |
 |----------|-------|----------------|-----------------------------------------|
